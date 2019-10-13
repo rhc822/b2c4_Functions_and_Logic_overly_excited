@@ -98,21 +98,79 @@
 // etc..
 
 
+// let sentence = ["The ","walrus ","danced ","through ","the ","trees ","in ","the ","light ","of ","the ","moon "];
+// let punctuation = "^ "
+
+// function addExcitement (theWordArray, punctuation) {
+//     let buildMeUp = ""
+
+//     for (let i = 0; i < theWordArray.length; i++) {
+//         if ((i + 1) % 3 === 0){
+//             buildMeUp = buildMeUp.concat(theWordArray[i] + punctuation);
+//             } else {
+//             buildMeUp = buildMeUp.concat(theWordArray[i]);
+//             }
+//         console.log(buildMeUp);
+//     }
+
+// }
+
+// addExcitement(sentence, punctuation)
+
+
+
+
+
+
+
+
+
+
+// Challenge: Multiple Punctuation
+// Challenges are optional exercises that you can work once you've completed all the practice exercises and understand the concepts in them.
+
+// Add a new argument to the function so that a developer can specify how many times the special character should be added.
+
+// // I want to use a 4 asterisks
+// addExcitement(sentence, "*", 4)
+// Example output:
+
+// The
+
+// The walrus
+
+// The walrus danced****
+
+// The walrus danced**** through
+
+// The walrus danced**** through the
+
+// The walrus danced**** through the trees****
+
+// The walrus danced**** through the trees**** in
+
+// etc..
+
+
 let sentence = ["The ","walrus ","danced ","through ","the ","trees ","in ","the ","light ","of ","the ","moon "];
-let punctuation = "^ "
+let punctuation = "^ ";
 
 function addExcitement (theWordArray, punctuation) {
     let buildMeUp = ""
 
     for (let i = 0; i < theWordArray.length; i++) {
-        if ((i + 1) % 3 === 0){
-            buildMeUp = buildMeUp.concat(theWordArray[i] + punctuation);
-            } else {
+        if ((i + 1) % 3 === 0){ //If the number in i is divisible by three (thus equals 0), then do the stuff in the IF loop (also, I did an "i + 1" so that it's always working with at least the number 1)
+            buildMeUp = buildMeUp.concat(theWordArray[i] + punctuation); 
+            for (let numberOfTimes = 0; numberOfTimes < 3; numberOfTimes++ ) {
+                buildMeUp = buildMeUp.concat(punctuation);
+            }
+        } else {
             buildMeUp = buildMeUp.concat(theWordArray[i]);
             }
         console.log(buildMeUp);
     }
-
 }
 
-addExcitement(sentence, punctuation)
+addExcitement(sentence, punctuation);
+
+
